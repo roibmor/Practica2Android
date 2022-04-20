@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RocioIbanez2PDM</string>
+    <string name="datos_mascota">Datos mascota:</string>
+    <string name="especie">especie</string>
+    <string name="nombre">nombre</string>
+    <string name="edad">edad</string>
+    <string name="mostrar_info">Mostrar info</string>
+    <string name="salir">salir</string>
+    <string name="perro">Perro</string>
+    <string name="gato">Gato</string>
+    <string name="otros">Otros</string>
+    <string name="ok">Ok</string>
+    <string name="textoNombre" />
+</resources>
