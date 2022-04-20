@@ -13,11 +13,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Bundle datos;
+    String especieObtenido = null;
+    String nombreObtenido = null;
+    String edadObtenido = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         Button btnSalir = (Button) findViewById(R.id.button5);
 
@@ -34,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
         btnDatos.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                datos = getIntent().getExtras();
-                String especieObtenido = datos.getString("pasar_especie");
-                String nombreObtenido = datos.getString("pasar_nombre");
-                String edadObtenido = datos.getString("pasar_edad");
+                /*datos = getIntent().getExtras();
+                especieObtenido = datos.getString("pasar_especie");
+                nombreObtenido = datos.getString("pasar_nombre");
+                edadObtenido = datos.getString("pasar_edad");*/
 
                 Intent in = new Intent(MainActivity.this, ImprimirDatos.class);
                 in.putExtra("pasar_especie", especieObtenido);
@@ -47,21 +51,32 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+
+        /*
+        buttonMostrar.setOnClickListener {
+            val mostrar = Intent(this, Mostrar::class.java)
+            mostrar.putExtra("valor_nombre", valor_nombre)
+            mostrar.putExtra("valor_apellido", valor_apellido)
+            mostrar.putExtra("valor_edad", valor_edad)
+            startActivity(mostrar)
+        }
+        */
+
     }
 
     public void clickBtnEspecie (View view) {
-        Intent intent = new Intent(this, EspecieMascota.class);
-        startActivityForResult(intent, 1);
+        Intent intentEspecie = new Intent(this, EspecieMascota.class);
+        startActivityForResult(intentEspecie, 1);
     }
 
     public void clickBtnNombre(View view) {
-        Intent intent = new Intent(this, NombreMascota.class);
-        startActivityForResult(intent, 2);
+        Intent intentNombre = new Intent(this, NombreMascota.class);
+        startActivityForResult(intentNombre, 2);
     }
 
     public void clickBtnEdad(View view) {
-        Intent intent = new Intent(this, EdadMascota.class);
-        startActivityForResult(intent, 3);
+        Intent intentEdad = new Intent(this, EdadMascota.class);
+        startActivityForResult(intentEdad, 3);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -69,19 +84,19 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
-                String pasar_especie = data.getExtras().getString("pasar_especie");
+                especieObtenido = data.getExtras().getString("pasar_especie");
             }
         }
 
         if (requestCode == 2) {
             if (resultCode == RESULT_OK) {
-                String pasar_nombre = data.getExtras().getString("pasar_nombre");
+                nombreObtenido = data.getExtras().getString("pasar_nombre");
             }
         }
 
         if (requestCode == 3) {
             if (resultCode == RESULT_OK) {
-                String pasar_edad = data.getExtras().getString("pasar_edad");
+                edadObtenido = data.getExtras().getString("pasar_edad");
             }
         }
 

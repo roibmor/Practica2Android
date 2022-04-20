@@ -65,7 +65,8 @@ public class EspecieMascota extends AppCompatActivity {
         intentEspecie.putExtra("pasar_especie", textoCadena);
         setResult(MainActivity.RESULT_OK, intentEspecie);
         Log.d("Especie:", "Se ha enviado la especie de la mascota.");
-        startActivity(intentEspecie);
+        //startActivity(intentEspecie);
+        finish();
     }
 }
 
