@@ -13,10 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="24dp"
-        android:text="textViewInfo"
-        android:textColor="#FFFFFF"
+        android:text="Los datos introducidos de la mascota son los siguientes (especie, nombre y edad):"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#9C9C9C"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

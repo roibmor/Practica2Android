@@ -22,7 +22,6 @@ public class EdadMascota extends AppCompatActivity {
         intentEdad.putExtra("pasar_edad", textoCadena);
         setResult(MainActivity.RESULT_OK, intentEdad);
         Log.d("Edad:", "Se ha enviado la edad de la mascota.");
-        //startActivity(intentEdad);
         finish();
     }
 }

@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.content.Intent;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Bundle datos;
     String especieObtenido = null;
     String nombreObtenido = null;
     String edadObtenido = null;
@@ -22,27 +22,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         Button btnSalir = (Button) findViewById(R.id.button5);
-
-        /*Button btnEdad = (Button) findViewById(R.id.button3);
-        btnEdad.setOnClickListener (new View.OnClickListener() {
+        btnSalir.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EdadMascota.class);
-                startActivityForResult(intent, 3);
+                finish();
             }
-        });*/
+        });
 
         Button btnDatos = (Button) findViewById(R.id.button4);
-        btnDatos.setOnClickListener(new View.OnClickListener(){
+        btnDatos.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View view) {
-                /*datos = getIntent().getExtras();
-                especieObtenido = datos.getString("pasar_especie");
-                nombreObtenido = datos.getString("pasar_nombre");
-                edadObtenido = datos.getString("pasar_edad");*/
-
                 Intent in = new Intent(MainActivity.this, ImprimirDatos.class);
                 in.putExtra("pasar_especie", especieObtenido);
                 in.putExtra("pasar_nombre", nombreObtenido);
@@ -51,17 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
-
-        /*
-        buttonMostrar.setOnClickListener {
-            val mostrar = Intent(this, Mostrar::class.java)
-            mostrar.putExtra("valor_nombre", valor_nombre)
-            mostrar.putExtra("valor_apellido", valor_apellido)
-            mostrar.putExtra("valor_edad", valor_edad)
-            startActivity(mostrar)
-        }
-        */
-
     }
 
     public void clickBtnEspecie (View view) {
@@ -99,6 +79,5 @@ public class MainActivity extends AppCompatActivity {
                 edadObtenido = data.getExtras().getString("pasar_edad");
             }
         }
-
     }
 }

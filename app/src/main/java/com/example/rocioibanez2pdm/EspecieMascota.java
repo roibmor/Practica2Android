@@ -57,15 +57,13 @@ public class EspecieMascota extends AppCompatActivity {
                 if (rbOtros.isChecked())
                     textoCadena = rbOtros.getText().toString();
                 }
-
-            }
+        }
 
         Log.d("cadena:", textoCadena);
         Intent intentEspecie = new Intent(EspecieMascota.this,MainActivity.class);
         intentEspecie.putExtra("pasar_especie", textoCadena);
         setResult(MainActivity.RESULT_OK, intentEspecie);
         Log.d("Especie:", "Se ha enviado la especie de la mascota.");
-        //startActivity(intentEspecie);
         finish();
     }
 }

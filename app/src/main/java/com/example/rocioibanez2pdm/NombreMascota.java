@@ -23,7 +23,6 @@ public class NombreMascota extends AppCompatActivity {
         intentNombre.putExtra("pasar_nombre", textoCadena);
         setResult(MainActivity.RESULT_OK, intentNombre);
         Log.d("Nombre:", "Se ha enviado el nombre de la mascota.");
-        //startActivity(intentNombre);
         finish();
     }
 }
