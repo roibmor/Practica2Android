@@ -15,7 +15,7 @@
         android:layout_marginTop="75dp"
         android:text="Introduzca la edad de la mascota"
         android:fontFamily="sans-serif-condensed"
-        android:textColor="#0C0C0C"
+        android:textColor="#808080"
         android:textSize="28sp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"

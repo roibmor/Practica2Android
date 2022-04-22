@@ -27,6 +27,8 @@
         android:layout_marginTop="159dp"
         android:minHeight="48dp"
         android:text="@string/perro"
+        android:textSize="18sp"
+        android:textColor="#808080"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,20 +42,24 @@
         android:layout_marginTop="219dp"
         android:minHeight="48dp"
         android:text="@string/gato"
+        android:textSize="18sp"
+        android:textColor="#808080"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:onClick="onRadioButtonClicked"/>
 
-<RadioButton
-    android:id="@+id/radioButton3"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="280dp"
-    android:minHeight="48dp"
-    android:text="@string/otros"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:onClick="onRadioButtonClicked"/>
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:minHeight="48dp"
+        android:text="@string/otros"
+        android:textSize="18sp"
+        android:textColor="#808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onRadioButtonClicked"/>
 </android.support.constraint.ConstraintLayout>

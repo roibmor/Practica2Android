@@ -16,7 +16,7 @@
         android:text="Introduzca el nombre de la mascota"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
-        android:textColor="#0C0C0C"
+        android:textColor="#808080"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
